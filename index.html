@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Сайт - Главная</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключаем общий CSS -->
+</head>
+<body>
+    <!-- Фиксированная верхняя полоска -->
+    <div class="top-strip">
+        <img src="фон шапка.png" alt="Верхняя полоска">
+    </div>
+
+    <!-- Лого в шапке -->
+    <div class="fixed-logo">
+        <img src="лого шапка.png" alt="Лого шапка">
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 5px; align-items: center;">
+        <!-- Полупрозрачное лого справа -->
+        <div class="right-image">
+            <img src="лого на фоне.png" alt="Полупрозрачное лого справа">
+        </div>
+    </div>
+
+
+    <!-- Главный текст -->
+    <div class="age-battle-text">
+        <span class="text-green">AGE BATTLE</span> - <span class="text-white">- ЭТО БАТТЛ ДЛЯ НАЧИНАЮЩИХ ТАНЦОРОВ, В ТОМ ЧИСЛЕ ДЛЯ ТЕХ,</span> 
+        <span class="text-white">КТО УЖЕ НЕ ЧУВСТВУЕТ СЕБЯ УЧАСТНИКОМ НОМИНАЦИИ</span><span class="text-green"> «BEGINNER»,</span>
+        <span class="text-white">НО ЕЩЕ НЕ МОЖЕТ В ПОЛНОЙ МЕРЕ РАСКРЫТЬ СЕБЯ В НОМИНАЦИИ</span><span class="text-green"> «PRO».</span>
+    </div>
+
+
+    <!-- Карусель -->
+    <div class="custom-carousel-wrapper">
+        <div class="custom-carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide" data-position="0">
+                    <div class="slide-content">
+                        <img src="ф1.jpg" alt="Картинка 1">
+                    </div>
+                </div>
+                <div class="carousel-slide" data-position="1">
+                    <div class="slide-content">
+                        <img src="ф2.jpg" alt="Картинка 2">
+                    </div>
+                </div>
+                <div class="carousel-slide" data-position="2">
+                    <div class="slide-content">
+                        <img src="ф3.jpg" alt="Картинка 3">
+                    </div>
+                </div>
+                <div class="carousel-slide" data-position="3">
+                    <div class="slide-content">
+                        <img src="ф4.jpg" alt="Картинка 4">
+                    </div>
+                </div>
+                <div class="carousel-slide" data-position="3">
+                    <div class="slide-content">
+                        <img src="ф5.jpg" alt="Картинка 5">
+                    </div>
+                </div>
+                <div class="carousel-slide" data-position="3">
+                    <div class="slide-content">
+                        <img src="ф6.jpg" alt="Картинка 6">
+                    </div>
+                </div>
+                <div class="carousel-slide" data-position="3">
+                    <div class="slide-content">
+                        <img src="ф7.jpg" alt="Картинка 7">
+                    </div>
+                </div>
+                <div class="carousel-slide" data-position="3">
+                    <div class="slide-content">
+                        <img src="ф8.jpg" alt="Картинка 8">
+                    </div>
+                </div>
+                <div class="carousel-slide" data-position="3">
+                    <div class="slide-content">
+                        <img src="ф9.jpg" alt="Картинка 9">
+                    </div>
+                </div>
+                <div class="carousel-slide" data-position="3">
+                    <div class="slide-content">
+                        <img src="ф10.jpg" alt="Картинка 10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        
+    <!-- Кнопка меню (3 точки) -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <!-- Шторка меню -->
+    <div class="sidebar" id="sidebar">
+
+        <ul class="menu-items">
+            <li><a href="description.html" onclick="closeMenu()">AGE 2.0</a></li>
+            <li><a href="registration.html" onclick="closeMenu()">Регистрация</a></li>
+            <li><a href="timing.html" onclick="closeMenu()">Тайминг</a></li>
+            <li><a href="audience.html" onclick="closeMenu()">Зрителям</a></li>
+        </ul>
+    </div>
+
+    <!-- Затемнение фона -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <div>
+        <div class="menu-buttons" style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+            <!-- Ссылки, стилизованные под большие кнопки -->
+            <a href="https://forms.gle/zYvuKEGibzoMUwaAA" target="_blank" class="menu-btn">УЧАСТВОВАТЬ</a>
+            </a>
+        </div>
+    </div>
+
+    <div class="image">
+        <img src="текст перечисление.png" alt="текст">
+    </div>
+
+
+    <!-- ------------------------------------------ КОНТАКТЫ -->
+    <div style="text-align: center; margin: 25px 0; margin-top: -10px; font-size: 22px;">
+        <span class="text-white">КОНТАКТЫ</span>
+    </div>
+
+    <div class="social-links">
+        <a href="https://t.me/+Oo2JCnEnjMk3ZjFi" target="_blank" title="telegram">
+            <img src="инст.png" alt="Инст" class="social-icon">
+        </a>
+        <a href="https://t.me/+Oo2JCnEnjMk3ZjFi" target="_blank" title="inst">
+            <img src="телеграммм.png" alt="ТГ" class="social-icon">
+        </a>
+    </div>
+
+    <!---------------------------------------------------------------------- КАРТА -->
+    <div class="map-container">
+        <div id="map"></div>
+        <div class="map-overlay">
+            <span class="text-green">CREATIVE ART</span><br>
+            Ул. Складочная 1, строение 13<br>
+            М. Дмитровская
+        </div>
+    </div>
+
+        <!-- Подключаем Leaflet для карты -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script>
+        // Инициализация карты после загрузки страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            // Координаты 
+            var map = L.map('map').setView([55.8035, 37.5794], 17);
+            
+            // Добавляем слой карты
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 19
+            }).addTo(map);
+            
+            // Добавляем маркер с иконкой
+            var customIcon = L.icon({
+                iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34]
+            });
+            
+            // Добавляем маркер
+            var marker = L.marker([55.8035, 37.5794], {icon: customIcon})
+                .addTo(map)
+                .bindPopup('<strong>CREATIVE ART</strong><br>Ул. Складочная 1, стр. 13<br>М. Дмитровская')
+                .openPopup();
+            
+            // Добавляем масштаб
+            L.control.scale().addTo(map);
+        });
+    </script>
+
+    <!-- Подключаем JS -->
+    <script src="carousel.js"></script>
+    
+</body>
+</html>

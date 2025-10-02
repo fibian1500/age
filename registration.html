@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Сайт - Меню</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключаем общий CSS -->
+</head>
+
+<body>
+
+    <!-- Фиксированная верхняя полоска -->
+    <div class="top-strip">
+        <img src="фон шапка.png" alt="Верхняя полоска">
+    </div>
+
+    <!-- Лого в шапке -->
+    <div class="fixed-logo">
+        <img src="лого шапка.png" alt="Лого шапка">
+    </div>
+
+    <!-- Кнопка меню (3 точки) -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <!-- Шторка меню -->
+    <div class="sidebar" id="sidebar">
+
+        <ul class="menu-items">
+            <li><a href="index.html" onclick="closeMenu()">Главная</a></li>
+            <li><a href="description.html" onclick="closeMenu()">AGE 2.0</a></li>
+            <li><a href="timing.html" onclick="closeMenu()">Тайминг</a></li>
+            <li><a href="audience.html" onclick="closeMenu()">Зрителям</a></li>
+        </ul>
+    </div>
+
+    <!-- Затемнение фона -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <div class="date-title" style="color: #ffffff; margin-bottom: 30px; font-size: 60px;">
+        РЕГИСТРАЦИЯ
+    </div>
+
+    <div class="reg-text" style=" margin-bottom: 30px; font-size: 20px;">
+        *РЕГИСТРАЦИЯ БУДЕТ СЧИТАТЬСЯ ЗАВЕРШЕННОЙ ПОСЛЕ ОПЛАТЫ УЧАСТИЯ
+    </div>
+
+    <div class="price-reg-text">
+        <span class="reg-white">ПРИ ОПЛАТЕ</span><span class="reg-green">ДО 20.10</span><span class="reg-white">:</span> 
+        <br>
+        <span class="reg-white">2.300 Р. + 600 Р. (ЗА СЛЕДУЮЩУЮ)</span>
+    </div>
+
+    <div class="price-reg-text">
+        <span class="reg-white">ПРИ ОПЛАТЕ</span> <br> <span class="reg-green">ПОСЛЕ 20.10 / НА МЕСТЕ</span><span class="reg-white">:</span> 
+        <br>
+        <span class="reg-white">2.600 Р. + 600 Р. (ЗА СЛЕДУЮЩУЮ)</span>
+    </div>
+
+    <div>
+        <div class="menu-buttons2" style="display: flex; flex-direction: column; margin-top: 50px; gap: 20px; align-items: center;">
+            <!-- Ссылки, стилизованные под большие кнопки -->
+            <a href="https://forms.gle/zYvuKEGibzoMUwaAA" target="_blank" class="menu-btn2">ЗАРЕГЕСТРИРОВАТЬСЯ</a>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Буквы на фоне -->
+    <div class="blurred-letters-container">
+        <div class="letter-A">
+            <img src="Am.png" alt="A" class="blurred-letter-img">
+        </div>
+        <div class="letter-G">
+            <img src="Gm.png" alt="G" class="blurred-letter-img">
+        </div>
+        <div class="letter-E">
+            <img src="Em.png" alt="E" class="blurred-letter-img">
+        </div>
+    </div>
+
+    <!-- ------------------------------------------ КОНТАКТЫ -->
+    <div style="text-align: center; margin: 25px 0; margin-top: 650px; font-size: 22px;">
+        <span class="text-white">КОНТАКТЫ</span>
+    </div>
+
+    <div class="social-links">
+        <a href="https://t.me/+Oo2JCnEnjMk3ZjFi" target="_blank" title="telegram">
+            <img src="инст.png" alt="Инст" class="social-icon">
+        </a>
+        <a href="https://t.me/+Oo2JCnEnjMk3ZjFi" target="_blank" title="inst">
+            <img src="телеграммм.png" alt="ТГ" class="social-icon">
+        </a>
+    </div>
+
+    <!---------------------------------------------------------------------- КАРТА -->
+    <div class="map-container">
+        <div id="map"></div>
+        <div class="map-overlay">
+            <span class="text-green">CREATIVE ART</span><br>
+            Ул. Складочная 1, строение 13<br>
+            М. Дмитровская
+        </div>
+    </div>
+
+        <!-- Подключаем Leaflet для карты -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script>
+        // Инициализация карты после загрузки страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            // Координаты 
+            var map = L.map('map').setView([55.8035, 37.5794], 17);
+            
+            // Добавляем слой карты
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 19
+            }).addTo(map);
+            
+            // Добавляем маркер с иконкой
+            var customIcon = L.icon({
+                iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34]
+            });
+            
+            // Добавляем маркер
+            var marker = L.marker([55.8035, 37.5794], {icon: customIcon})
+                .addTo(map)
+                .bindPopup('<strong>CREATIVE ART</strong><br>Ул. Складочная 1, стр. 13<br>М. Дмитровская')
+                .openPopup();
+            
+            // Добавляем масштаб
+            L.control.scale().addTo(map);
+        });
+    </script>
+
+    <!-- Подключаем JS -->
+    <script src="carousel.js"></script>
+
+</body>

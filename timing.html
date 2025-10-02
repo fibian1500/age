@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Сайт - Меню</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключаем общий CSS -->
+</head>
+<body>
+
+    <!-- Фиксированная верхняя полоска -->
+    <div class="top-strip">
+        <img src="фон шапка.png" alt="Верхняя полоска">
+    </div>
+
+    <!-- Лого в шапке -->
+    <div class="fixed-logo">
+        <img src="лого шапка.png" alt="Лого шапка">
+    </div>
+
+    <!-- Кнопка меню (3 точки) -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <!-- Кнопка меню (3 точки) -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <!-- Шторка меню -->
+    <div class="sidebar" id="sidebar">
+
+        <ul class="menu-items">
+            <li><a href="index.html" onclick="closeMenu()">Главная</a></li>
+            <li><a href="description.html" onclick="closeMenu()">AGE 2.0</a></li>
+            <li><a href="registration.html" onclick="closeMenu()">Регистрация</a></li>
+            <li><a href="audience.html" onclick="closeMenu()">Зрителям</a></li>
+        </ul>
+    </div>
+
+    <!-- Затемнение фона -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+    
+
+    <!-- Подключаем наш JavaScript файл -->
+    <script src="carousel.js"></script>
+
+</body>
+</html>
