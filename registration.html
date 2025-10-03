@@ -8,33 +8,23 @@
 </head>
 
 <body>
-
     <!-- Фиксированная верхняя полоска -->
     <div class="top-strip">
-        <img src="фон шапка.png" alt="Верхняя полоска">
+        <img src="top_strip.png" alt="Верхняя полоска">
     </div>
 
-    <!-- Лого в шапке -->
-    <div class="fixed-logo">
-        <img src="лого шапка.png" alt="Лого шапка">
+    <!-- Навигационная панель -->
+    <div class="top-nav">
+        <div class="fixed-logo">
+            <img src="logo_top_strip.png" alt="Лого">
+        </div>
+        <nav class="nav-menu">
+            <a href="description.html">AGE 2.0</a>
+            <a href="registration.html">Регистрация</a>
+            <a href="timing.html">Тайминг</a>
+            <a href="audience.html">Зрителям</a>
+        </nav>
     </div>
-
-    <!-- Кнопка меню (3 точки) -->
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-    <!-- Шторка меню -->
-    <div class="sidebar" id="sidebar">
-
-        <ul class="menu-items">
-            <li><a href="index.html" onclick="closeMenu()">Главная</a></li>
-            <li><a href="description.html" onclick="closeMenu()">AGE 2.0</a></li>
-            <li><a href="timing.html" onclick="closeMenu()">Тайминг</a></li>
-            <li><a href="audience.html" onclick="closeMenu()">Зрителям</a></li>
-        </ul>
-    </div>
-
-    <!-- Затемнение фона -->
-    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
 
     <div class="date-title" style="color: #ffffff; margin-bottom: 30px; font-size: 60px;">
         РЕГИСТРАЦИЯ
@@ -83,11 +73,11 @@
     </div>
 
     <div class="social-links">
-        <a href="https://t.me/+Oo2JCnEnjMk3ZjFi" target="_blank" title="telegram">
-            <img src="инст.png" alt="Инст" class="social-icon">
+        <a href="https://www.instagram.com/age_battle?igsh=MWRrOXVxNHZtaGl1aQ==" target="_blank" title="telegram">
+            <img src="inst.png" alt="Инст" class="social-icon">
         </a>
-        <a href="https://t.me/+Oo2JCnEnjMk3ZjFi" target="_blank" title="inst">
-            <img src="телеграммм.png" alt="ТГ" class="social-icon">
+        <a href="https://t.me/age_battle" target="_blank" title="inst">
+            <img src="tg.png" alt="ТГ" class="social-icon">
         </a>
     </div>
 

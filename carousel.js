@@ -176,34 +176,11 @@ class CustomCarousel {
 
 
 
-// ------------------------------------------------------------------------------- Функции для шторки меню
-function toggleMenu() {
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-    
-    sidebar.classList.toggle('active');
-    overlay.classList.toggle('active');
-    
-    // блокировка прокрутки body при открытом меню
-    document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
-}
 
-function closeMenu() {
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-    
-    sidebar.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = ''; // разблокировка прокрутки
-}
-
-// инициализация при загрузке страницы
+// ------------------------------------------------------------------------------- Инициализация
 document.addEventListener('DOMContentLoaded', function() {
     // инициализация карусели
     new CustomCarousel();
-    
-    // инициализация меню
-    console.log('Меню и карусель инициализированы');
     
     // закрытие меню при нажатии на Escape
     document.addEventListener('keydown', function(event) {

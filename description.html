@@ -7,33 +7,24 @@
     <link rel="stylesheet" href="styles.css"> <!-- Подключаем общий CSS -->
 </head>
 <body>
-    <!-- Кнопка меню (3 точки) -->
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-    <!-- Шторка меню -->
-    <div class="sidebar" id="sidebar">
-
-        <ul class="menu-items">
-            <li><a href="index.html" onclick="closeMenu()">Главная</a></li>
-            <li><a href="registration.html" onclick="closeMenu()">Регистрация</a></li>
-            <li><a href="timing.html" onclick="closeMenu()">Тайминг</a></li>
-            <li><a href="audience.html" onclick="closeMenu()">Зрителям</a></li>
-        </ul>
-    </div>
-
-    <!-- Затемнение фона -->
-    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
-    
     <!-- Фиксированная верхняя полоска -->
     <div class="top-strip">
-        <img src="фон шапка.png" alt="Верхняя полоска">
+        <img src="top_strip.png" alt="Верхняя полоска">
     </div>
 
-    <!-- Лого в шапке -->
-    <div class="fixed-logo">
-        <img src="лого шапка.png" alt="Лого шапка">
+    <!-- Навигационная панель -->
+    <div class="top-nav">
+        <div class="fixed-logo">
+            <img src="logo_top_strip.png" alt="Лого">
+        </div>
+        <nav class="nav-menu">
+            <a href="description.html">AGE 2.0</a>
+            <a href="registration.html">Регистрация</a>
+            <a href="timing.html">Тайминг</a>
+            <a href="audience.html">Зрителям</a>
+        </nav>
     </div>
-    
+
     <div class="date-title">
         ДАТА ПРОВЕДЕНИЯ
     </div>
@@ -53,7 +44,7 @@
         
         <!-- Основное изображение -->
         <div class="foreground-image">
-            <img src="место фото.png" alt="Место проведения">
+            <img src="place.png" alt="Место проведения">
         </div>
     </div>
 
@@ -76,7 +67,7 @@
         
         <!-- Основное изображение -->
         <div class="foreground-image-group">
-            <img src="плашка инфосун.png" alt="Судьи">
+            <img src="info_soon.png" alt="Судьи">
         </div>
     </div>
 
@@ -91,7 +82,7 @@
         
         <!-- Основное изображение -->
         <div class="foreground-image-group" style="margin-top: -13px;">
-            <img src="плашка инфосун.png" alt="Судьи">
+            <img src="info_soon.png" alt="Судьи">
         </div>
     </div>
 
@@ -121,11 +112,11 @@
     </div>
 
     <div class="image_AGE">
-        <img src="No age.png" alt="juniors">
+        <img src="No_age.png" alt="juniors">
     </div>
 
     <div class="image_AGE">
-        <img src="Advancde H.png" alt="juniors">
+        <img src="Advancde_H.png" alt="juniors">
     </div>
 
     <!-- ------------------------------------------ КОНТАКТЫ -->
@@ -134,11 +125,11 @@
     </div>
 
     <div class="social-links">
-        <a href="https://t.me/+Oo2JCnEnjMk3ZjFi" target="_blank" title="telegram">
-            <img src="инст.png" alt="Инст" class="social-icon">
+        <a href="https://www.instagram.com/age_battle?igsh=MWRrOXVxNHZtaGl1aQ==" target="_blank" title="telegram">
+            <img src="inst.png" alt="Инст" class="social-icon">
         </a>
-        <a href="https://t.me/+Oo2JCnEnjMk3ZjFi" target="_blank" title="inst">
-            <img src="телеграммм.png" alt="ТГ" class="social-icon">
+        <a href="https://t.me/age_battle" target="_blank" title="inst">
+            <img src="tg.png" alt="ТГ" class="social-icon">
         </a>
     </div>
 
