@@ -188,7 +188,7 @@ body {
     }
     
     .nav-menu a {
-        font-size: 14px;
+        font-size: 10px;
     }
     
     .top-nav {
@@ -853,6 +853,7 @@ body {
         transform: translateX(200px) translateY(-250px);
     }
 }
+
 
 
 
